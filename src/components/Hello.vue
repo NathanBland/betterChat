@@ -1,7 +1,7 @@
 <template lang='jade'>
   div.hello
-    h1 {{ msg }}
-    h2 {{ tagline }}
+    h1.title {{ msg }}
+    h2.subtitle {{ tagline }}
 </template>
 
 <style lang='sass' scoped>
@@ -23,7 +23,7 @@ export default {
       // with hot-reload because the reloaded component
       // preserves its current state and we are modifying
       // its initial state.
-      msg: 'Hello Mark!'
+      test: 'Hello Mark!'
     }
   }
 }
