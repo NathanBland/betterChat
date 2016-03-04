@@ -1,18 +1,19 @@
 <template lang='jade'>
 section.hero.is-info.is-medium
   // Hero header: will stick at the top
+  my-canvas(location='{{$route.path}}')
   .hero-header
     header.header
       .container
         .header-left
-          a.header-item(v-link="{path: '/'}") bC
+          a.header-item(v-link="{path: '/', exact: true }") bC
         span.header-toggle
           span
           span
           span
         .header-right.header-menu
           span.header-item
-            a.is-active(v-link="{path: '/'}") Home
+            a(v-link="{path: '/', exact: true }") Home
           span.header-item
             a(v-link="{path: '/about'}") About
           span.header-item
@@ -25,3 +26,15 @@ section.hero.is-info.is-medium
       h2.subtitle Communicating should be easy.
   // Hero footer: will stick at the bottom
 </template>
+<style lang='sass'>
+</style>
+
+<script>
+import myCanvas from './myCanvas'
+export	default {
+  name: 'myHeader',
+  components: {
+    myCanvas
+  }
+}
+</script>
