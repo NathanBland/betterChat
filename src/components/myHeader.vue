@@ -1,7 +1,7 @@
 <template lang='jade'>
 section.hero.is-info.is-medium
   // Hero header: will stick at the top
-  my-canvas(location='{{$route.path}}')
+  my-canvas(:location='{{$route.path}}')
   .hero-header
     header.header
       .container

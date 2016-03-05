@@ -2,7 +2,7 @@
   <div id='bgCanvas'></div>
 </template>
 <style lang='sass'>
-.hero canvas
+.hero svg
   position: absolute
   overflow: hidden
   top: 0px
@@ -29,7 +29,13 @@ export default {
     console.log(this.canvas)
     console.log(this)
     var holder = document.querySelector('.hero')
-    holder.insertBefore(this.canvas.canvas(), holder.firstChild)
+    holder.insertBefore(this.canvas.svg(), holder.firstChild)
+  },
+  update: function () {
+    console.log(this.canvas)
+    console.log(this)
+    var holder = document.querySelector('.hero')
+    holder.insertBefore(this.canvas.svg(), holder.firstChild)
   }
 }
 
